@@ -207,7 +207,7 @@ static void my_timer_init(int timer_idx, bool auto_reload, double timer_interval
     timer_start(TIMER_GROUP_0, timer_idx);
 }
 
-//The main task of timer
+
 //initialization esp32 uart1 for gsm modem
 void mdm_init(void) {
     const uart_config_t mdmuart_config = {

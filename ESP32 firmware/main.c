@@ -78,7 +78,7 @@ xQueueHandle pcnt_evt_queue;   				// A queue to handle pulse counter events
 pcnt_isr_handle_t isr_handle = NULL; 		//ISR service handle
 
 
-char fBase_link[45] = "https://xxxxxxx.firebaseio.com";
+char fBase_link[45] = "https://xxxxxxx.firebaseio.com";		//where xxxxxxx your firebase project name
 char fBase_key[120];
 char fBase_data[120];
 int upldInterval = 60;		//upload data to firebase every "upldInterval" minutes

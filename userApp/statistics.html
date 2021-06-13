@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+		<title>Statistics</title>
+		<style>
+		
+			canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div class="container">
+			<!--Navbar-->
+			<nav class="navbar navbar-light teal lighten-4">
+
+				<!-- Navbar brand -->
+				<a class="navbar-brand" href="#">Menu</a>
+
+				<!-- Collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+					aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Collapsible content -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+					<!-- Links -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="my_home_today.html">Συνοπτική εικόνα</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="mysettings.html">Ρυθμίσεις</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="logout.html">Logout</a>
+						</li>
+					</ul>
+					<!-- Links -->
+
+				</div>
+				<!-- Collapsible content -->
+
+			</nav>
+			<!--/.Navbar-->
+			<div class="p-3 mb-2 bg-info text-white">
+				<p class="text-center"><h5>Ανάλυση κατανάλωσης</h5></p>
+			</div>
+			<div class="dropdown">
+				<button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="sYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;">
+					Επιλέξτε έτος
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenu">
+					<button class="dropdown-item" type="button" onclick="yearFunction('2020')">2020</button>
+					<button class="dropdown-item" type="button" onclick="yearFunction('2021')">2021</button>
+					<button class="dropdown-item" type="button" onclick="yearFunction('2022')">2022</button>
+					
+				</div>
+			</div>
+			
+			<div class="dropdown">
+				<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="sMonth" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;">
+					Επιλέξτε μήνα
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					<button class="dropdown-item" type="button" onclick="monthFunction('Ιανουάριος')">Ιανουάριος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Φεβρουάριος')">Φεβρουάριος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Μάρτιος')">Μάρτιος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Απρίλιος')">Απρίλιος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Μάιος')">Μάιος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Ιούνιος')">Ιούνιος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Ιούλιος')">Ιούλιος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Αύγουστος')">Αύγουστος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Σεπτέμβριος')">Σεπτέμβριος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Οκτώβριος')">Οκτώβριος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Νοέμβριος')">Νοέμβριος</button>
+					<button class="dropdown-item" type="button" onclick="monthFunction('Δεκέμβριος')">Δεκέμβριος</button>
+				</div>
+			</div>
+			
+			<div class="p-3 mb-2 bg-warning text-dark">
+				<p class="text-center">Μηνιαία κατανάλωση συνολικά</p>
+				<p class="text-center" id="consumption"></p>
+			</div>
+			<div class="p-3 mb-2 bg-light text-dark">
+				<p class="text-center">Τελευταία ενημέρωση</p>
+				<p class="text-center" id="last_update"></p>
+			</div>
+			
+			<div class="p-3 mb-2 bg-white text-dark">
+				<canvas id="myChart" width="500" height="320"></canvas>
+			</div>
+			
+		</div>
+		
+		
+		
+		<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+  		<!-- TODO: Add SDKs for Firebase products that you want to use
+  		https://firebase.google.com/docs/web/setup#config-web-app -->
+  		<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+		
+		    
+		<script src="js/statistics.js"></script>
+		
+		
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>

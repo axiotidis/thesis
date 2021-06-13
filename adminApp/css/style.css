@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    background:#92bde7;
+    color:#485e74;
+    line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+  }
+  
+  .cancelButton{
+    width:100%;
+    padding:1em;
+    border:1px solid #ffddc9;
+    background:#ffddc9;
+    color:#000000
+    border:0;
+    font-size: 18px;
+  }
+ .cancelButton:hover,.cancelButton:focus{
+    background:#e7b192;
+    color:#ffffff;
+    outline:0;
+  }
+  
+  .container{
+    max-width:1170px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:1em;
+  }
+  
+  .brand{
+    text-align: center;
+  }
+  
+  .brand span{
+    color:#fff;
+  }
+  
+  .wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    background:#c9e6ff;
+    border-radius: 5px;
+  }
+  
+  .wrapper > *{
+    padding: 1em;
+  }
+
+  .wrapper-singup{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    border-radius: 5px;
+  }
+  
+  .wrapper-singup > *{
+    padding: 1em;
+  }
+
+  .user-info{
+    background:#c9e6ff;
+  }
+  
+  .user-info h3{
+    text-align: center;
+    margin:0 0 1rem 0;
+  }
+  
+  .imgrespo{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background:#c9e6ff;
+    padding: 5px;
+    margin: 5px;
+    border-top: 2px solid #485e74;
+  }
+
+  .no-grid{
+    float: right;
+    display: block;
+  }
+
+
+  a:link, a:visited {
+    background-color: #fff;
+    color: #485e74;
+    margin: 5px;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  a:hover, a:active {
+    background: #485e74;
+    color: white;
+  }
+
+  a.forgotps:link , a.forgotps:visited  {
+    color: #485e74;
+    margin: 0px;
+    padding: 5px 5px 5px 0px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;         
+  }
+
+  a.forgotps:hover , a.forgotps:active  {
+    background:#f9feff;
+    color: #01c3f3;
+  }
+
+  .singup{
+    background:#f9feff;
+  }
+
+  .singin{
+    background:#f9feff;
+  }
+
+
+  /* FORM STYLES SING UP*/
+  .singup form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+  }
+  
+  .singup form label{
+    display:block;
+  }
+  
+  .singup form p{
+    margin:0;
+  }
+  
+  .singup form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .singup form button, .singup form input{
+    width:100%;
+    padding:1em;
+    border:1px solid #c9e6ff;
+  }
+ 
+.singup form select {
+    width:100%;
+    padding:1em;
+    border:1px solid #c9e6ff;
+}
+
+  .singup form button{
+    background:#c9e6ff;
+    border:0;
+    font-size: 18px;
+  }
+  
+  .singup form button:hover,.singup form button:focus{
+    background:#92bde7;
+    color:#fff;
+    outline:0;
+  }
+
+  /* FORM STYLES SING IN*/
+  .singin form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+  }
+  
+  .singin form label{
+    display:block;
+  }
+
+  .singin form p{
+    margin:0;
+    text-align: center;
+  }
+  
+  .singin form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .singin form button, .singin form input{
+    width:100%;
+    padding:1em;
+    border:1px solid #c9e6ff;
+  }
+  .singin form textarea{
+     background-color: rgb(255, 255, 255);
+     width:100%;
+     padding:1em;
+     box-sizing: border-box;
+     border:1px solid #c9e6ff;
+     resize: none;
+}
+
+.singin form canvas{
+     background-color: rgb(255, 255, 255);
+     width:100%;
+     padding:1em;
+     box-sizing: border-box;
+     border:1px solid #c9e6ff;
+     resize: none;
+}
+
+  .singin form button{
+    background:#c9e6ff;
+    border:0;
+    font-size: 18px;
+  }
+  
+  .singin form button:hover,.singin form button:focus{
+    background:#92bde7;
+    color:#fff;
+    outline:0;
+  }
+
+  .alert{
+    text-align: center;
+    padding: 10px;
+    background: #4ebb4e;
+    color: #fff;
+    margin-bottom: 10px;;
+    display: none;
+  }
+
+  .continue{
+    text-align: center;
+    padding: 10px;
+    background: #e76c1b;
+    color: #fff;
+    margin-bottom: 10px;;
+    display: none;
+  }
+  
+  /* LARGE SCREENS */
+  @media(min-width:700px){
+    .wrapper-singup {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+    
+      .wrapper-singup > *{
+        padding:2em;
+      }
+    
+      .singup-info h3, .singup-info ul, .brand{
+        text-align: left;
+      }
+    
+    a:link, a:visited {
+        background-color: #fff;
+        color: #485e74;
+        margin: 5px;
+        padding: 10px 10px 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    a:hover, a:active {
+        background: #485e74;
+        color: white;
+    }
+
+    a.forgotps:link , a.forgotps:visited  {
+      color: #485e74;
+      margin: 0px;
+      padding: 5px 5px 5px 0px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;         
+    }
+  
+    a.forgotps:hover , a.forgotps:active  {
+      background:#f9feff;
+      color: #01c3f3;
+    }
+
+    a.map:link , a.map:visited  {
+      color: #fff; 
+      margin: 0px;
+
+    }
+  
+    a.map:hover , a.map:active  {
+       color: #01c3f3;
+    }
+  }
+  

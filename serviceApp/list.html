@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<title>My Home Today</title>
+		<style>
+		
+			canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div class="container">
+			<!--Navbar-->
+			<nav class="navbar navbar-light teal lighten-4">
+
+				<!-- Navbar brand -->
+				<a class="navbar-brand" href="#">Menu</a>
+
+				<!-- Collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+					aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Collapsible content -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+					<!-- Links -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="map.html">Χάρτης δικτύου</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="logout.html">Logout</a>
+						</li>
+					</ul>
+					<!-- Links -->
+
+				</div>
+				<!-- Collapsible content -->
+
+			</nav>
+			<!--/.Navbar-->
+			<div class="p-3 mb-2 bg-primary text-white">
+				<p class="text-center"><h5>Προβλήματα στο δίκτυο</h5></p>
+			</div>
+			<div class="p-3 mb-2 bg-warning text-dark">
+				<ul class="list-group" id="thelist">
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+  		<!-- TODO: Add SDKs for Firebase products that you want to use
+  		https://firebase.google.com/docs/web/setup#config-web-app -->
+  		<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+		
+		    
+		<script src="js/list.js"></script>
+		
+		
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+</html>
